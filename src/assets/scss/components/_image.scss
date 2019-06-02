@@ -73,6 +73,7 @@
 			}
 		}
 
+
 		@include breakpoint(small) {
 			&.main {
 				margin: (_size(element-margin) * 1) 0;
