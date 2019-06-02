@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Portfolio from './Portfolio'
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card'
+import Gallery from './ImageGallery'
+import ReactPlayer from 'react-player'
+
 
 import trussInteriors from '../images/truss-interiors.png'
 import portoWeb from '../images/porto-web.jpg'
@@ -11,6 +14,8 @@ import sklarCenter from '../images/sklar-center.png'
 import twoPugs from '../images/two-pugs.png'
 import sethAnderson from '../images/seth-anderson.png'
 import hvlInteriors from '../images/hvl-interiors.png'
+import natBigSur from '../images/bday-big-sur.jpg'
+import resume from '../pdfs/nathaniels-resume-2019.pdf'
 
 class Main extends React.Component {
   render() {
@@ -22,11 +27,11 @@ class Main extends React.Component {
 
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Background</h2>
-          <span className="image main"><img src={portoWeb} alt="" /></span>
-          <p>Hello there! I am a world-travelling, rock-climbing, pug-loving front end web developer looking to shift career directions to working with a motivated team that </p>
-          <p>I love exploration, problem-solving, and connecting with others. Prior to starting my career in web development I spent years teaching English internationally and living in Spain, Turkey, Austria, and South Africa.</p>
-          <p>Since completing a fullstack bootcamp through <a href="www.deepdivecoding.com" target="blank">Deep Dive Coding</a> I have spent the last year travelling extensively doing contract work for a variety of clients. My main client was an agency based in Santa Fe that tasked me with being their lead developer in charge of a team . I have learned a lot of valuable lessons from this time in the freelance world, but have . I am excited to pour my energy and motivation usually spent on </p>
-          <p></p>
+          <span className="image main"><img src={natBigSur} alt="Nat Gustafson portrait on the Big Sur coast" /></span>
+          <p>Hello there! My name is Nathaniel Gustafson. I am a world-travelling, rock-climbing, pug-loving front-end web developer looking to shift career directions to working with a motivated team on more in-depth and technically challenging projects.</p>
+          <p>I love exploration, problem-solving, and connecting with others. Prior to starting my career in web development, I spent years teaching English internationally and living in Spain, Turkey, Austria, and South Africa.</p>
+          <p>Since completing a fullstack bootcamp through <a href="www.deepdivecoding.com" target="blank">Deep Dive Coding</a>, I have spent the last year travelling extensively doing contract work for a variety of clients. My main client was an agency based in Santa Fe that tasked me with being their lead developer. In that role I was in charge of a small team of developers tasked with building new sites and debugging and fixing everything from CSS to improper API calls to database issues. I have learned a lot of valuable lessons from this time in the freelance world, but would like to invest more time and energy in working with highly skilled developers to better my craft. I am excited to pour my energy and motivation usually spent on travelling and freelance work into learning new skills and advancing my career.</p>
+          <p>For a full view of my education and work experience you can download my <a href={resume} target="_blank">resume here.</a></p>
           {close}
         </article>
 
@@ -109,13 +114,20 @@ class Main extends React.Component {
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Photography</h2>
           <p>My complete photography portfolio is coming soon. In the meantime here is an eclectic gallery with some of my favorite shots. Enjoy!</p>
+          <Gallery />
+          <h2 id="video" className="major">Videos</h2>
+          <p>Here are a few climbing videos that I made as well... if you are into that sort of thing!</p>
+          <ReactPlayer url='https://vimeo.com/250394677' width='100%'/>
+          <p></p>
+          <ReactPlayer url='https://vimeo.com/133495253' width='100%'/>
+          
           {close}
         </article>
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <p>Intersted in working together, have any questions, or just want to connect? </p>
-          <form method="post" action="#">
+          <p>Interested in working together, have any questions, or just want to connect? Send me a message and I will get back to you in the next 24 hours.</p>
+          <form action="https://formspree.io/nat@natgus.com" method="POST" >
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -134,11 +146,12 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="#" className="icon fa-linkedin"><span className="label">Facebook</span></a></li>
-            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/nathanielgustafson/" className="icon fa-linkedin"><span className="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/supernatalio/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+            <li><a href="https://github.com/natjgus" className="icon fa-github"><span className="label">GitHub</span></a></li>
           </ul>
           {close}
+
         </article>
 
       </div>
