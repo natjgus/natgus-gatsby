@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import ImageGallery from 'react-image-gallery';
 
 
-import portoWeb from '../images/porto-web.jpg'
 
 export class Gallery extends React.Component {
 

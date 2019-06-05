@@ -1,5 +1,5 @@
 import React from 'react'
-import pic02 from '../images/pic02.jpg'
+
 
 
 export default props => (

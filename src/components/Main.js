@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Portfolio from './Portfolio'
 import Card from 'react-bootstrap/Card'
-import Gallery from './ImageGallery'
 import ReactPlayer from 'react-player'
+
+import Gallery from './ImageGallery'
+import ContactForm from './ContactForm'
+import Portfolio from './Portfolio'
 
 
 import trussInteriors from '../images/truss-interiors.png'
@@ -41,7 +43,7 @@ class Main extends React.Component {
             <h3>App Development</h3>
             <div className="portfolioItem">
               <p>During my time spent learning at Deep Dive Coding I worked amongst a team to build a mobile web application, <a href="https://www.abqstreetart.com" target="_blank" >ABQ Street Art</a>, an interactive map that allows users to search and locate murals, sculptures, and other public art in Albuquerque.</p>
-              <a href="https://www.abqstreetart.com" rel="noopener" target="_blank" className="imageLink"><img className="" src={abqStreetArt} alt="ABQ Street Art red and green chile logo" /> </a> 
+              <a href="https://www.abqstreetart.com" rel="noopener noreferrer" target="_blank" className="imageLink"><img className="" src={abqStreetArt} alt="ABQ Street Art red and green chile logo" /> </a> 
             </div>  
           </div>
           <Portfolio
@@ -58,7 +60,7 @@ class Main extends React.Component {
           </ul>
           <div className="portfolioGrid">
             <Card >
-              <a href="https://www.drumackclimbs.com" rel="noopener" target="_blank">
+              <a href="https://www.drumackclimbs.com" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={druMackWeb} />
               <Card.Body>
                 <Card.Title>Dru Mack Climbs</Card.Title>
@@ -66,7 +68,7 @@ class Main extends React.Component {
               </a>
             </Card>
             <Card >
-            <a href="https://www.trussinteriors.com" rel="noopener" target="_blank">
+            <a href="https://www.trussinteriors.com" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={trussInteriors} />
               <Card.Body>
               <Card.Title>Truss Interiors</Card.Title>
@@ -74,7 +76,7 @@ class Main extends React.Component {
               </a>
             </Card>
             <Card >
-              <a href="https://www.sklarcenter.com" rel="noopener" target="_blank">
+              <a href="https://www.sklarcenter.com" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={sklarCenter} />
               <Card.Body>
               <Card.Title>Sklar Center for Medicine</Card.Title>
@@ -84,7 +86,7 @@ class Main extends React.Component {
             </div>
             <div className="portfolioGrid">
             <Card >
-              <a href="https://www.sarahgus.yoga" rel="noopener" target="_blank">
+              <a href="https://www.sarahgus.yoga" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={twoPugs} />
               <Card.Body>
                 <Card.Title>Two Pugs Yoga</Card.Title>
@@ -92,7 +94,7 @@ class Main extends React.Component {
               </a>
             </Card>
             <Card >
-              <a href="https://www.sethandersonstudio.com" rel="noopener" target="_blank">
+              <a href="https://www.sethandersonstudio.com" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={sethAnderson} />
               <Card.Body>
               <Card.Title>Seth Anderson Studios</Card.Title>
@@ -100,7 +102,7 @@ class Main extends React.Component {
               </a>
             </Card>
             <Card >
-              <a href="https://www.hvlinteriors.com" rel="noopener" target="_blank">
+              <a href="https://www.hvlinteriors.com" rel="noopener noreferrer" target="_blank">
               <Card.Img variant="top" src={hvlInteriors} />
               <Card.Body>
               <Card.Title>HVL Interiors</Card.Title>
@@ -115,6 +117,13 @@ class Main extends React.Component {
           <h2 className="major">Photography</h2>
           <p>My complete photography portfolio is coming soon. In the meantime here is an eclectic gallery with some of my favorite shots. Enjoy!</p>
           <Gallery />
+          <p className="nospace">My work has been featured in:</p>
+          <ul>
+            <li>La Sportiva</li>
+            <li>Desnivel Magazine</li>
+            <li>Ultima Hora Mallorca</li>
+            <li>Mallorca Zeitung</li>
+            </ul>
           <h2 id="video" className="major">Videos</h2>
           <p>Here are a few climbing videos that I made as well... if you are into that sort of thing!</p>
           <ReactPlayer url='https://vimeo.com/250394677' width='100%'/>
@@ -127,24 +136,7 @@ class Main extends React.Component {
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
           <p>Interested in working together, have any questions, or just want to connect? Send me a message and I will get back to you in the next 24 hours.</p>
-          <form action="https://formspree.io/nat@natgus.com" method="POST" >
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
+          <ContactForm />
           <ul className="icons">
             <li><a href="https://www.linkedin.com/in/nathanielgustafson/" className="icon fa-linkedin"><span className="label">Facebook</span></a></li>
             <li><a href="https://www.instagram.com/supernatalio/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
