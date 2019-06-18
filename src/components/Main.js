@@ -52,9 +52,9 @@ class Main extends React.Component {
           />
           <ul>
             <li>HTML5 & SCSS</li>
-            <li>Wordpress</li>
-            <li>PHP</li>
+            <li>Wordpress & PHP</li>
             <li>JavaScript (vanilla, jQuery, and other frameworks)</li>
+            <li>VueJS</li>
             <li>SEO Performance</li>
             <li>Adobe Creative Cloud Programs</li>
           </ul>
