@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: "Nathaniel Gustafson's Portfolio",
@@ -5,6 +6,13 @@ module.exports = {
     description: "Nathaniel Gustafson's online development and photography portfolio"
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -19,6 +27,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
   ],
 }
