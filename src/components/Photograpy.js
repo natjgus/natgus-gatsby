@@ -8,7 +8,7 @@ import SquamishFrog from '../images/squamish-frog.jpg'
 class Photography extends React.Component {
   render() {
     return ( 
-      <div class="photography-component">
+      <div className="photography-component">
         <h2 className="major">Photography</h2>
         <p>My complete photography portfolio is coming soon!</p>
         <img src={SquamishFrog} style={{width: 100 + '%'}}/>

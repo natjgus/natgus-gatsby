@@ -12,7 +12,7 @@ import hvlInteriors from '../images/hvl-interiors.png'
 
 
 export default props => (
-    <div class="portfolio-component">
+    <div className="portfolio-component">
     
         <h2 className="major">Portfolio</h2>
         <div className="portfolio" >
